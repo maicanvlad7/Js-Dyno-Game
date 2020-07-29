@@ -1,4 +1,4 @@
-<html lang="en" onclick="jump()">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +14,19 @@
             <div id="game" class="mg-center mt-5">
                 <div id="character"></div>
                 <div id="obstacle"></div>
+                <div id="scoreboard">
+                    <p>SCORE: <span id="score"></span></p>
+                </div>
+                <!-- <div id="ground"></div> -->
             </div>
             <div class="row mt-5" id="game-controls">
                 <div class="col-md-4 mg-center">
                    <div class="row">
                     <div class="col-md-4">
-                        <button class="btn-success">START</button>
+                        <button class="btn-success" onclick='start()'>START</button>
                     </div>
                     <div class="col-md-4">
-                        <button class="btn-danger">STOP</button>
+                        <button class="btn-danger" onclick='stop()'>STOP</button>
                     </div>
                     <div class="col-md-4">
                         <button class="btn-info">RESET GAME</button>

@@ -5,6 +5,11 @@ html{
     overflow-x: hidden!important;
 }
 
+body{
+    background: url('../img/bg.png');
+    background-size: cover;
+}
+
 .mg-center{
     margin: 0 auto;
 }
@@ -19,15 +24,31 @@ html{
     border: 1px solid black;
 }
 
+#scoreboard{
+    color: white!important;
+    width: 3vw;
+    height: 4vh;
+    position: relative;
+}
+
+/*#ground{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background: url('../img/ground.png');
+    
+    background-repeat: repeat-x;
+    top: 32.5vh;
+}*/
+
 #character{
-    width: 3.5vw;
+    width: 4vw;
     height: 10vh;
     background-color: green;
     position: relative;
-    /* background: url('../img/character.png') -9.2vw; 
+    background: url('../img/run.gif'); 
     background-size: cover;
-    animation: sprite 0.5s infinite;
-    */
     /* game height - char height => update to SCSS and we can compute this */
     top: 40vh;   
 }
@@ -39,10 +60,14 @@ html{
 #obstacle{
     height: 5vh;
     width: 3vw;
-    background-color: red;
+    background: url('../img/monster.gif'); 
+    background-size: cover;
     position: relative;
     top: 35vh;
     left: 57vw;
+}
+
+.block{
     animation: block 1.5s infinite linear;
 }
 
@@ -58,11 +83,6 @@ html{
     100%{left:0vw;}
 }
 
-
-@keyframes sprite{
-    0%{background: url('../img/character.png') -3vw;background-size: cover;}
-    100%{background: url('../img/character.png') -9.2vw;background-size: cover;}
-}
 
 @keyframes jump{
     0%{top: 40vh;}
