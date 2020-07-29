@@ -1,0 +1,72 @@
+/* CSS FOR THE GAME */
+
+/* Get rid of scroll bar */
+html{
+    overflow-x: hidden!important;
+}
+
+.mg-center{
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+#game{
+    width: 60vw;
+    height: 50vh;
+    border: 1px solid black;
+}
+
+#character{
+    width: 3.5vw;
+    height: 10vh;
+    background-color: green;
+    position: relative;
+    /* background: url('../img/character.png') -9.2vw; 
+    background-size: cover;
+    animation: sprite 0.5s infinite;
+    */
+    /* game height - char height => update to SCSS and we can compute this */
+    top: 40vh;   
+}
+
+.animate-char{
+    animation: jump 1s linear;
+}
+
+#obstacle{
+    height: 5vh;
+    width: 3vw;
+    background-color: red;
+    position: relative;
+    top: 35vh;
+    left: 57vw;
+    animation: block 1.5s infinite linear;
+}
+
+.mainCol{
+    margin-top: 10vh;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ANIMATIONS */
+
+@keyframes block{
+    0%{left:57vw;}
+    100%{left:0vw;}
+}
+
+
+@keyframes sprite{
+    0%{background: url('../img/character.png') -3vw;background-size: cover;}
+    100%{background: url('../img/character.png') -9.2vw;background-size: cover;}
+}
+
+@keyframes jump{
+    0%{top: 40vh;}
+    30%{top: 34vh;}
+    70%{top: 34vh;}
+    100%{top: 40vh;}
+}
